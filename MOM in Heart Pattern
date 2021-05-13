@@ -1,0 +1,54 @@
+'''                                   "MOM" IN HEART PATTERN
+                                         *****      *****
+                                        *******    *******
+                                       *********  *********
+                                      **********************
+                                     ************************
+                                    **************************
+                                    *** ***** **  ** ***** ***
+                                    ***  ***  *    *  ***  ***
+                                    ***   *   *    *   *   ***
+                                    ***       *    *       ***
+                                     **  * *  *    *  * *  **
+                                      *  ***  **  **  ***  *
+                                       ********************
+                                        ******************
+                                         ****************
+                                          **************
+                                           ************
+                                            **********
+                                             ********
+                                              ******
+                                               ****
+                                                **
+                                '''
+from termcolor import colored,cprint
+for r in range(12):
+    for c in range(26):
+        if (r==0 and (c in range(5,10) or c in range(16,21)))\
+        or (r==1 and (c in range(4,11) or c in range(15,22)))\
+        or (r==2 and (c in range(3,12) or c in range(14,23)))\
+        or (r==3 and (c in range(2,24)))\
+        or (r==4 and (c in range(1,25)))\
+        or (r==5 and (c in range(26))):
+            print('*',end="")
+        elif (r==6 and (c not in (12,13,3,9,16,22)))\
+        or (r==7 and (c not in (3,4,8,9,16,17,21,22) or c not in range(11,15)))\
+        or (r==8 and (c in range(3) or c in (6,10,15,19) or c in range(23,26)))\
+        or (r==9 and (c in range(3) or c in (10,15) or c in range(23,26)))\
+        or( r==10 and (c in (1,2,5,7,10,15,18,20,23,24)))\
+        or (r==11 and (c in (2,5,6,7,10,11,14,15,18,19,20,23))):
+            cprint('*','grey','on_red',end="")
+        else:
+            print(end=" ")
+    print()
+j=3
+for i in range(20,0,-2):
+    print(" "*j+"*"*i)
+    j+=1
+
+
+
+
+
+
